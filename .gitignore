@@ -1,1 +1,16 @@
-*.o
+*
+
+!.gitignore
+!Makefile
+!README.md
+
+!*.cpp
+!*.hpp
+!*.c
+!*.h
+!*.glsl
+!*.pdf
+
+!*.obj
+!*.jpg
+

@@ -9,6 +9,9 @@ helpers.o: helpers.hpp helpers.cpp stb_image.h
 	$(CXX) -c $(CFLAGS) helpers.cpp -o helpers.o
 	
 
+hw2:
+	tar -czf hw2.tar.gz Makefile *.cpp *.h *.hpp *.glsl *.obj hw2_support_files 
+
 .PHONY: clean
 clean:
 	-rm *.o
