@@ -1022,7 +1022,7 @@ void fillCubeTex(GLFWwindow* window)
 
 void keyboard(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
-    if (key == GLFW_KEY_Q && action == GLFW_PRESS)
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
     {
         glfwSetWindowShouldClose(window, GLFW_TRUE);
     }
@@ -1059,6 +1059,14 @@ void keyboard(GLFWwindow* window, int key, int scancode, int action, int mods)
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
     {
         eyePos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed * deltaTime;
+    }
+    if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
+    {
+        eyePos -= glm::normalize(cameraUp) * cameraSpeed * deltaTime;
+    }
+    if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
+    {
+        eyePos += glm::normalize(cameraUp) * cameraSpeed * deltaTime;
     }
 
     //if (glfwGetKey(window, GLFW_KEY_X) == GLFW_PRESS)

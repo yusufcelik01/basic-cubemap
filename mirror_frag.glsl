@@ -44,5 +44,7 @@ void main(void)
 	//fragColor = vec4(specularColor + ambientColor, 1);
     vec3 incidentRay = normalize(vec3(fragWorldPos) - eyePos);
     vec3 reflectingRay = reflect(incidentRay, normalize(fragWorldNor));
+    // for refracting objects enable the line below
+    //vec3 reflectingRay = refract(incidentRay, normalize(fragWorldNor), 0.5);
     fragColor = texture(cubeMap, reflectingRay);
 }
