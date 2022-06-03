@@ -263,10 +263,10 @@ bool ParseObj(const string& fileName)
 					str >> vIndex[2]; str >> c >> c; // consume "//"
 					str >> nIndex[2]; 
 
-					assert(vIndex[0] == nIndex[0] &&
-						   vIndex[1] == nIndex[1] &&
-						   vIndex[2] == nIndex[2]); // a limitation for now
-
+//					assert(vIndex[0] == nIndex[0] &&
+//						   vIndex[1] == nIndex[1] &&
+//						   vIndex[2] == nIndex[2]); // a limitation for now
+//
 					// make indices start from 0
 					for (int c = 0; c < 3; ++c)
 					{
